@@ -14,87 +14,93 @@ typedef struct Lieu lieu;
 
 void deplacements( lieu tLieu[],int destinationChoice){
 	
-	if (destinationChoice<=3){	
-		
-		if(destinationChoice==1){
+		while (destinationChoice<=3){	
 			
-		printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[0].nom,tLieu[0].description,tLieu[0].difficult);
-		printf ("\nQuelle destination veux tu choisir ?\n");
-		printf ("1)%s  2)%s  3)%s \n",tLieu[0].nom,tLieu[1].nom,tLieu[2].nom);
-		
-		scanf("%d",&destinationChoice);
-			
-			if( destinationChoice==2){
-				printf("Destination eligible !");
-				printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[1].nom,tLieu[1].description,tLieu[1].difficult);
+			if(destinationChoice==1){
 				
-				scanf("%d",&destinationChoice);
+			printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[0].nom,tLieu[0].description,tLieu[0].difficult);
+			printf ("\nQuelle destination veux tu choisir ?\n");
+			printf ("1)%s  2)%s  3)%s \n",tLieu[0].nom,tLieu[1].nom,tLieu[2].nom);
+			
+			
+				
+				if( destinationChoice==2){
+					printf("Destination eligible !");
+					printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[1].nom,tLieu[1].description,tLieu[1].difficult);
+					
+					
+				}
+				else {
+					printf ("Tu es trop loin de cette destination ! Choisis-en une autre !");
+					printf ("\nQuelle destination veux tu choisir ?\n");
+					printf ("1)%s  2)%s  3)%s \n",tLieu[0].nom,tLieu[1].nom,tLieu[2].nom);
+					
+					
+				}
 			}
-			else {
-				printf ("Tu es trop loin de cette destination ! Choisis-en une autre !");
-				printf ("\nQuelle destination veux tu choisir ?\n");
-				printf ("1)%s  2)%s  3)%s \n",tLieu[0].nom,tLieu[1].nom,tLieu[2].nom);
+			
+			if(destinationChoice==2){
 				
-				scanf("%d",&destinationChoice);
+			printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[1].nom,tLieu[1].description,tLieu[1].difficult);
+			printf ("\nQuelle destination veux tu choisir ?\n");
+			printf ("1)%s  2)%s  3)%s \n",tLieu[0].nom,tLieu[1].nom,tLieu[2].nom);
+			
+			
+			
+				if( destinationChoice==1){
+					printf("Destination eligible !");
+					printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[0].nom,tLieu[0].description,tLieu[0].difficult);
+					
+					
+				}
+				
+				else if( destinationChoice==3){
+					printf("Destination eligible !");
+					printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[2].nom,tLieu[2].description,tLieu[2].difficult);
+					
+					
+				}
+				
+				else {
+					printf ("Tu es trop loin de cette destination ! Choisis-en une autre !");
+					printf ("\nQuelle destination veux tu choisir ?\n");
+					printf ("1)%s  2)%s  3)%s \n",tLieu[0].nom,tLieu[1].nom,tLieu[2].nom);
+					
+					
+				}
+			}
+			
+			if(destinationChoice==3){
+			
+			printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[2].nom,tLieu[2].description,tLieu[2].difficult);
+			printf ("\nQuelle destination veux tu choisir ?\n");
+			printf ("1)%s  2)%s  3)%s \n",tLieu[0].nom,tLieu[1].nom,tLieu[2].nom);
+			
+			
+			
+				if( destinationChoice==2){
+					printf("Destination eligible !");
+					printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[1].nom,tLieu[1].description,tLieu[1].difficult);
+					
+					
+				}
+				else {
+					printf ("Tu es trop loin de cette destination ! Choisis-en une autre !");
+					printf ("\nQuelle destination veux tu choisir ?\n");
+					printf ("1)%s  2)%s  3)%s \n",tLieu[0].nom,tLieu[1].nom,tLieu[2].nom);
+					
+					
+				}
 			}
 		}
 		
-		if(destinationChoice==2){
+		if(destinationChoice>=3){
 			
-		printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[1].nom,tLieu[1].description,tLieu[1].difficult);
-		printf ("\nQuelle destination veux tu choisir ?\n");
-		printf ("1)%s  2)%s  3)%s \n",tLieu[0].nom,tLieu[1].nom,tLieu[2].nom);
+		printf("Un chiffre entre 1 et 3 SVP !!!\n");
 		
-		scanf("%d",&destinationChoice);
-		
-			if( destinationChoice==1){
-				printf("Destination eligible !");
-				printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[0].nom,tLieu[0].description,tLieu[0].difficult);
-				
-				scanf("%d",&destinationChoice);
-			}
-			
-			else if( destinationChoice==3){
-				printf("Destination eligible !");
-				printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[2].nom,tLieu[2].description,tLieu[2].difficult);
-				
-				scanf("%d",&destinationChoice);
-			}
-			
-			else {
-				printf ("Tu es trop loin de cette destination ! Choisis-en une autre !");
-				printf ("\nQuelle destination veux tu choisir ?\n");
-				printf ("1)%s  2)%s  3)%s \n",tLieu[0].nom,tLieu[1].nom,tLieu[2].nom);
-				
-				scanf("%d",&destinationChoice);
-			}
 		}
 		
-		if(destinationChoice==3){
-		
-		printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[2].nom,tLieu[2].description,tLieu[2].difficult);
-		printf ("\nQuelle destination veux tu choisir ?\n");
-		printf ("1)%s  2)%s  3)%s \n",tLieu[0].nom,tLieu[1].nom,tLieu[2].nom);
-		
-		scanf("%d",&destinationChoice);
-		
-			if( destinationChoice==2){
-				printf("Destination eligible !");
-				printf ("\n La Ville de %s, %s , cette ville a un niveau de danger de %d/19\n",tLieu[1].nom,tLieu[1].description,tLieu[1].difficult);
-				
-				scanf("%d",&destinationChoice);
-			}
-			else {
-				printf ("Tu es trop loin de cette destination ! Choisis-en une autre !");
-				printf ("\nQuelle destination veux tu choisir ?\n");
-				printf ("1)%s  2)%s  3)%s \n",tLieu[0].nom,tLieu[1].nom,tLieu[2].nom);
-				
-				scanf("%d",&destinationChoice);
-			}
-		}
-	}
-	else (printf("Un chiffre entre 1 et 3 SVP !!!"));
-};
+	};
 
 
 int main(){
@@ -113,8 +119,6 @@ int main(){
 	scanf("%d",&destinationChoice);
 	
 	deplacements(tLieu,destinationChoice);
-	
-	
 	
 	return 0;
 	}
