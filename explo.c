@@ -4,6 +4,7 @@
 #include <string.h>
 
 int main(){
+	char choixDestination[100];
 	char destination1[100]="Paris";
 	char destination2[100]="Barcelone";
 	int destinationChoice=0;
@@ -11,15 +12,15 @@ int main(){
 	
 	printf ("\nQuelle destination veux tu choisir ? 1)%s et 2)%s\n",destination1,destination2);
 	
-	for (int i=0; i<3; i++){
+	for (int i=0; i<100; i++){
 		
-	scanf("%d",&destinationChoice);
+	 scanf("%s",&choixDestination);
 	
-		if (destinationChoice==1){
+		if (strcmp(choixDestination, destination1) ==0) {
 			printf( "Vous avez atteint %s", destination1);
 		}
 		
-		else if ( destinationChoice==2){
+		else if (strcmp(choixDestination, destination2) ==0) {
 		printf( "Vous avez atteint %s", destination2);
 		}
 			
@@ -27,5 +28,6 @@ int main(){
 		
 		return 0;
 	}
+	
 	
 	
